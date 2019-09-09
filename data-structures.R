@@ -70,7 +70,10 @@ typeof(cats$weight)
 
 cats <- read.csv(file = "data/feline-data.csv")
 
-# Vector and coercion
+#
+# Vectors and coercion
+#
+
 my_vector <- vector(length = 3)
 my_vect
 
@@ -79,4 +82,128 @@ another_vector
 
 str(another_vector)
 str(cats$weight)
-å
+
+DISCUSSION 1
+
+# using combine to make a vector
+combine_vector <- c(2,6,3)
+combine_vector
+
+# colercion
+quiz_vector <- c(2,6,'3')
+
+coercion_vector <- c('a', TRUE)
+coercion_vector
+
+another_coercion_vector <- c(0, TRUE)
+another_coercion_vector
+
+character_vector_example <- c('0','2','4')
+character_vector_example
+
+character_coerced_to_numeric <- as.numeric(character_vector_example)
+character_coerced_to_numeric
+
+numeric_coerced_to_logical <- as.logical(character_coerced_to_numeric)
+numeric_coerced_to_logical
+
+
+cats$likes_string
+cats$likes_string <- as.logical(cats$likes_string)
+cats$likes_string
+
+ab_vector <- c('a', 'b')
+ab_vector
+
+combine_example <- c(ab_vector, 'SWC')
+combine_example
+
+mySeries <- 1:10
+mySeries
+
+seq(10)
+seq(1,10, by=0.1)
+
+sequence_example <- seq(10)
+head(sequence_example, n=2)
+tail(sequence_example, n=4)
+length(sequence_example)
+class(sequence_example)
+typeof(sequence_example)
+
+my_example <- 5:8
+names(my_example) <- c("a", "b", "c", "d")
+my_example
+names(my_example)
+
+CHALLENGE 1
+
+#
+# Data Frames
+#
+str(cats$weight)
+str(cats$likes_string)
+str(cats$coat)
+
+# Factors
+coats <- c('tabby', 'tortoiseshell', 'tortoiseshell', 'black', 'tabby')
+coats
+str(coats)
+
+CATegories <- factor(coats)
+class(CATegories)
+str(CATegories)
+
+typeof(coats)
+typeof(CATegories)
+
+CHALLENGE 2
+Soln: 
+cats <- read.csv(file="data/feline-data.csv", stringsAsFactors=FALSE)
+str(cats$coat)
+
+mydata <- c("case", "control", "control", "case")
+factor_ordering_example <- factor(mydata, levels = c("control", "case"))
+str(factor_ordering_example)
+
+#
+# Lists
+#
+
+list_example <- list(1, "a", TRUE, 1+4i)
+list_example
+
+another_list <- list(title = "Numbers", numbers = 1:10, data = TRUE )
+another_list
+
+typeof(cats)
+cats$coat
+
+cats[,1]
+typeof(cats[,1])
+str(cats[,1])
+
+cats[1,]
+typeof(cats[1,])
+str(cats[1,])
+
+CHALLENGE 3
+
+#
+# Matices
+#
+matrix_example <- matrix(0, ncol=6, nrow=3)
+matrix_example
+
+class(matrix_example)
+typeof(matrix_example)
+
+str(matrix_example)
+dim(matrix_example)
+
+ncol(matrix_example)
+nrow(matrix_example)
+
+CHALLENGE 4
+
+
